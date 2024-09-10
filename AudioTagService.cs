@@ -20,7 +20,7 @@ public static class AudioTagService
         {
             var file = files[i];
             var fileExtension = file.Extension.Replace(".", "");
-            if (!AudioExtensionList.Contains(fileExtension))
+            if (!AudioExtensionList.Contains(fileExtension, StringComparer.OrdinalIgnoreCase))
             {
                 continue;
             }
